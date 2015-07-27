@@ -1,8 +1,9 @@
 import socket
 
+ip = raw_input("server ip: ")
 secure = False
 s = socket.socket()
-s.connect((socket.gethostname(), 12345))
+s.connect((ip, 12345))
 s.setblocking(1)
 #Authenticate
 while not secure:
